@@ -1,0 +1,212 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MoonTime -- Донат Магазин</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #3b007a, #0a0014 70%);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://i.pinimg.com/736x/ff/51/ec/ff51ec21b0b99f5eb5a9e2f927538038.jpg') center/cover no-repeat;
+    filter: blur(4px) brightness(0.7);
+    transform: scale(1.1);
+}
+header h1 {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    letter-spacing: 3px;
+    color: #e6d2ff;
+    text-shadow: 0 0 10px #a86dff, 0 0 25px #7430ff;
+}
+
+/* GRID */
+.shop-grid {
+    max-width: 1050px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 15px;
+}
+
+/* CARD WITH IMAGE */
+.card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 18px rgba(120, 60, 255, 0.35);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(150, 90, 255, 0.45);
+}
+
+.card-content {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #000;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffddff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #000;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #8a3dff, #c187ff);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.buy-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #b97cff, #e9cdff);
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 15px;
+    color: #c89aff;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+.contact-info a {
+    color: #e6d2ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* СНЕЖИНКИ */
+.snowflake {
+    position: fixed;
+    top: -20px;
+    color: #fff;
+    font-size: 8px;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px) translateX(0); }
+    100% { transform: translateY(100vh) translateX(50px); }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>MOONTIME</h1>
+</header>
+
+<div class="shop-grid">
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/62/ca/31/62ca31f498af347c897b03af5b5b487d.jpg');">
+        <div class="card-content"><h2>Дракон</h2><div class="price">12₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/6d/c8/af/6dc8af777547869e319a5cf577cfbee7.jpg');">
+        <div class="card-content"><h2>Звезда</h2><div class="price">39₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/61/09/eb/6109ebe01ee9192d95a733d8cb94bc34.jpg');">
+        <div class="card-content"><h2>Аполон</h2><div class="price">119₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/9e/39/02/9e3902fdbd126d9be823e34776661d80.jpg');">
+        <div class="card-content"><h2>Магниум</h2><div class="price">239₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/8f/8d/e0/8f8de09503bda32773a973feeb4809eb.jpg');">
+        <div class="card-content"><h2>Volcano</h2><div class="price">549₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.ytimg.com/vi/588rUyMQ23s/maxresdefault.jpg');">
+        <div class="card-content"><h2>Magister</h2><div class="price">799₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.pinimg.com/736x/0b/07/eb/0b07ebd14c986fef5ca8a9fb1350a1f0.jpg');">
+        <div class="card-content"><h2>General</h2><div class="price">1199₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://i.ytimg.com/vi/6g32ssgd3xM/maxresdefault.jpg');">
+        <div class="card-content"><h2>Ахилес</h2><div class="price">1599₽</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+    <div class="card" style="background-image: url('https://holyworld.ru/source/img/slides/boxed-coins.png');">
+        <div class="card-content"><h2>Кроны</h2><div class="price">1₽ / 1 шт</div><a href="https://funpay.com/users/14793690/" target="_blank" class="buy-btn">Купить</a></div>
+    </div>
+</div>
+
+<footer>
+    © 2025 MoonTime -- Все права защищены
+    <div class="contact-info">
+        Сайт был создан отделом Task Assistant WeB -- <a href="https://t.me/Task_Assistant_WeB" target="_blank">Написать в Telegram</a>
+    </div>
+</footer>
+
+<script>
+// Генерация снежинок с разными размерами и скоростью
+const snowCount = 50;
+for (let i = 0; i < snowCount; i++) {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.textContent = '❄';
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    snowflake.style.fontSize = (5 + Math.random()*12) + 'px';
+    snowflake.style.opacity = Math.random() * 0.8 + 0.2;
+    const duration = 5 + Math.random()*10;
+    snowflake.style.animationDuration = duration + 's';
+    snowflake.style.animationDelay = Math.random()*10 + 's';
+    document.body.appendChild(snowflake);
+}
+</script>
+</body>
+</html>
